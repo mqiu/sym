@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('user/{name?}',function($name=null){
+    return view('sample',['name'=>"<hr>".$name]);
+});
+Route::get('/{display}',function($display){
+    return "OOOOOOOOO<br><hr><br>---".display;
+});
