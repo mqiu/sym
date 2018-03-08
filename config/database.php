@@ -41,17 +41,17 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'localhost'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'microStore'),
-            'username' => env('DB_USERNAME', 'root'),
-            'password' => env('DB_PASSWORD', 'k3vacc3'),
+            'host' => '127.0.0.1',
+            'port' => '3306',
+            'database' => 'microStore',
+            'username' => 'root',
+            'password' => '123123',
             'unix_socket' => env('DB_SOCKET', ''),
-            'charset' => 'utf8mb4',
-            'collation' => 'utf8mb4_unicode_ci',
+            'charset' => 'utf8mb4', // utf8
+            'collation' => 'utf8mb4_unicode_ci', // utf8_unicode_ci
             'prefix' => '',
             'strict' => true,
-            'engine' => null,
+            'engine' => 'InnoDB',
         ],
 
         'pgsql' => [

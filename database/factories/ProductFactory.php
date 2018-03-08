@@ -13,9 +13,9 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(App\Product::class, function (Faker $faker) {
+$factory->define(App\Http\models\Product::class, function (Faker $faker) {
     return [
-        'productName' => $faker->name,
+        'product_mame' => $faker->name,
         'description' => $faker->sentence,
         'price' => $faker->numberBetween(1,300),
     ];

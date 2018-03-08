@@ -14,13 +14,16 @@ class CreateProductsTable extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('productName')->default('')->index('product_name');
+            //$table->engine = 'InnoDB';
+            $table->increments('id', 10)->unsigned();
+            $table->string('product_mame', 256)->default('')->index('product_name');
             $table->longText('description')->nullable();
             $table->decimal('price',7,2)->default(0);
-            $table->text('image')->nullable();
-            $table->dateTime('liveDate')->nullable();
-            $table->string('productRelation')->nullable();
+            $table->text('images')->nullable();  // switch to use its own table later
+            $table->dateTime('live_date')->nullable();
+            $table->dateTime('deactivate_date')->nullable();
+            //$table->string('product_relation')->nullable();
+            $table->tinyInteger('status')->default(0);
             $table->timestamps();
         });
     }
