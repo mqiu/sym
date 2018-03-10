@@ -15,5 +15,7 @@ class DatabaseSeeder extends Seeder
         //factory(App\Http\models\Product::class, 5)->create();
         //factory(App\Http\models\Customer::class, 5)->create();
         factory(App\Http\models\CustomerAddress::class, 5)->create();
+        factory(App\Http\models\Order::class, 5)->create();
+        //factory(App\Http\models\OrderProduct::class, 5)->create();
     }
 }
